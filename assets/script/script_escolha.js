@@ -61,10 +61,20 @@ function activeBackground() {
 /* JAVASCRIPT - FUNÇÃO PARA DESATIVAÇÃO DO VÍDEO */
 
 function closeVideos() {
-    var displayValue = document.querySelector(".info-film-display") 
-    if (infoVideo){
-        displayValue["style"]["display"] = "none";
-        infoVideo = false
+    var displayValue = document.querySelector(".info-film-display")
+    var displayValue2 = document.querySelector(".inf-film-display-responsive") 
+    var windowWidth = screen.width;
+    var windowHeight = screen.height;
+    if (windowHeight <= 1024 && windowWidth <= 863) {
+        if (infoVideo){
+            displayValue2["style"]["display"] = "none";
+            infoVideo = false
+        }
+    } else {
+        if (infoVideo){
+            displayValue["style"]["display"] = "none";
+            infoVideo = false
+        }
     }
 }
 
@@ -73,13 +83,28 @@ function closeVideos() {
 
 function openVideoInfos() {
     var displayValue = document.querySelector(".info-film-display") 
-    if (infoVideo){
-        displayValue["style"]["display"] = "none";
-        infoVideo = false
-    }else {
-        displayValue["style"]["display"] = "block";
-        infoVideo = true 
-    }  
+    var displayValue2 = document.querySelector(".inf-film-display-responsive") 
+    var windowWidth = screen.width;
+    var windowHeight = screen.height;
+
+    console.log(windowWidth,windowHeight)
+    if (windowHeight <= 1024 && windowWidth <= 863) {
+        if (infoVideo){
+            displayValue2["style"]["display"] = "none";
+            infoVideo = false
+        }else {
+            displayValue2["style"]["display"] = "block";
+            infoVideo = true 
+        }  
+    } else {
+        if (infoVideo){
+            displayValue["style"]["display"] = "none";
+            infoVideo = false
+        }else {
+            displayValue["style"]["display"] = "block";
+            infoVideo = true 
+        }  
+    }
 }
 
 /* JAVASCRIPT - FUNÇÃO PARA ATIVAÇÃO DO MENU DE INFOS RESPONSIVO  */

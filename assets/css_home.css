@@ -76,7 +76,6 @@ body {
 
 /* CSS - INFOS RESPONSIVE*/
 
-
 .navbar .nav-responsive-display {
     display: none;
 }
@@ -84,11 +83,12 @@ body {
 .navbar .nav-responsive-display .nav-responsive a{
     display: flex;
     position: absolute;
-    top: 38px;
-    left: 250px;
+    top: 10px;
+    left: 100px;
     color: aliceblue;
     font-size: 12px;
     text-decoration: none;
+    margin-left: -30px;
 }
 
 
@@ -103,11 +103,12 @@ body {
     height: 200px;
     z-index: 2;
     top: 80px;
-    left: 170px;
+    left: 1px;
     opacity: 0.8;
     border-radius: 15px;
     background: #1E1E17;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left: -40px;
 }
 
 .navbar .nav-responsive-display .infos li{
@@ -138,8 +139,8 @@ body {
     color: #F6C000;
 }
 
-
 /* CSS - LOGO MEIO */
+
 .navbar .nav-logo {
     display: inline-block  ;   
     justify-content: center;
@@ -155,7 +156,7 @@ body {
     top: -24px;
 }
 
-/* CSS - MENU ALERTA */
+/* CSS - MENU DE GERENCIAMENTO */
 
 .gerenciar {
     display: none;
@@ -173,7 +174,6 @@ body {
     background: #1E1E17;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
 
 .gerenciar .seta {
     position: relative;
@@ -216,7 +216,6 @@ body {
     color: #F6C000;
 }
 
-
 /* CSS - MENU DE ALERTAS */
 
 .alerts {
@@ -235,7 +234,6 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-
 .alerts .alert-box .alert-arrow {
     position: relative;
     left: 27px;
@@ -250,6 +248,8 @@ body {
     font-size: 9.80px;
     color: aliceblue;
 }
+
+/* CSS - INFORMAÇÕES DO FILME */
 
 .info-film-display {
     display: none;
@@ -323,6 +323,73 @@ body {
     margin-left: 10px;
 }
 
+/* CSS - INFORMAÇÕES DO FILME - RESPONSIVO */
+
+.inf-film-display-responsive {
+    display: none;
+}
+
+.info-responsive {
+    position: absolute;
+    background-color: #d81919;
+    width: 100vw;
+    height: 92vh;
+    top: 0;
+    z-index: 4;
+}
+    
+.info-responsive .image img {
+    display: flex;
+    position: relative;
+    width: 300px;
+    top: 28px;
+    margin-inline: auto;
+}
+
+.inf-film-display-responsive .info-responsive .texts .one-text {
+    width: 300px;
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.inf-film-display-responsive .info-responsive .texts .two-text {
+    width: 300px;
+    height: 300px;
+    margin-top: -50px;
+    margin-left: 10px;
+}
+
+.inf-film-display-responsive .info-responsive .texts .three-text {
+    width: 300px;
+    height: 250px;
+    margin-top: -140px;
+    margin-left: 10px;
+}
+
+.inf-film-display-responsive .info-responsive .texts h1 {
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.inf-film-display-responsive .info-responsive .close {
+    display: flex;
+    position: relative;
+    top: -850px;
+    right: -288px;
+}
+
+.inf-film-display-responsive .info-responsive .extras {
+    display: flex;
+    position: relative;
+    top: -160px;
+    right: -200px;
+}
+
+.inf-film-display-responsive .info-responsive .extras .film-play {
+    margin-left: -170px;
+}
+
 /* CSS - BARRA DE PESQUISA*/
 
 .pesquisa {
@@ -361,7 +428,6 @@ body {
 }
 
 /* CSS -  BOOTSTRAP CAROUSEL */
-
 
 .carousel-inner {
     margin-top: 30px;
@@ -419,7 +485,6 @@ body {
     }
 }
 
-
 @keyframes animateright{
     from{
         right:-300px;
@@ -429,6 +494,8 @@ body {
         opacity:1
     }
 }
+
+/* CSS - MEDIA */
 
 @media (max-width: 768px) {
 
@@ -565,6 +632,45 @@ body {
         font-size: 10px;
         width: 80%;
     }
+
+    .info-responsive {
+        width: 78vw;
+        height: 78vh;
+    }
+
+    .inf-film-display-responsive .info-responsive .extras {
+        right: -340px;
+        top: -200px;
+    }
+
+    .inf-film-display-responsive .info-responsive .close {
+        top: -850px;
+        right: -560px;
+    }
+
+    .info-responsive .image img {
+        width: 300px;
+        top: 28px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .one-text {
+        margin-top: 38px;
+        margin-left: 150px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .two-text {
+        margin-top: -115px;
+        margin-left: 150px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .three-text {
+        margin-top: -160px;
+        margin-left: 150px;
+    }
+
+    .inf-film-display-responsive .info-responsive .texts h1 {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 425px) {
@@ -685,6 +791,33 @@ body {
     .navbar .nav-responsive-display .infos {
         top: 80px;
         left: 270px;
+    }
+
+    .info-responsive {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .inf-film-display-responsive .info-responsive .extras {
+        right: -230px;
+        top: -200px;
+    }
+
+    .info-responsive .image img {
+        width: 300px;
+        top: 28px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .one-text {
+        margin-left: 50px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .two-text {
+        margin-left: 50px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .three-text {
+        margin-left: 50px;
     }
 }
 
@@ -809,6 +942,15 @@ body {
     .navbar .nav-responsive-display .infos {
         top: 80px;
         left: 220px;
+    }
+
+    .info-responsive {
+        width: 100vw;
+        height: 92vh;
+    }
+
+    .inf-film-display-responsive .info-responsive .extras {
+        top: -200px;
     }
 }
 
@@ -989,5 +1131,65 @@ body {
     
     .info-film .extras .film-up {
         margin-left: 10px;
+    }
+    .info-responsive {
+        position: absolute;
+        background-color: #d81919;
+        width: 100vw;
+        height: 92vh;
+        top: 0;
+        z-index: 4;
+    }
+        
+    .info-responsive .image img {
+        display: flex;
+        position: relative;
+        width: 300px;
+        top: 28px;
+        margin-inline: auto;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .one-text {
+        width: 300px;
+        height: 250px;
+        margin-top: 50px;
+        margin-left: 10px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .two-text {
+        width: 300px;
+        height: 300px;
+        margin-top: -50px;
+        margin-left: 10px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .three-text {
+        width: 300px;
+        height: 250px;
+        margin-top: -140px;
+        margin-left: 10px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts h1 {
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+    
+    .inf-film-display-responsive .info-responsive .close {
+        display: flex;
+        position: relative;
+        top: -850px;
+        right: -288px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .extras {
+        display: flex;
+        position: relative;
+        top: -160px;
+        right: -200px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .extras .film-play {
+        margin-left: -170px;
     }
 }
